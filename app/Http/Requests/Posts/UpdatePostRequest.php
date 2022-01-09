@@ -27,6 +27,7 @@ class UpdatePostRequest extends FormRequest
         return [
            'title' => ['required','min:10','max:100', Rule::unique('posts')->ignore($this->post->id, 'id')],
            'video' => 'required',
+           'description' => 'required',
            'category_id' => 'required|numeric'
         ];
     }

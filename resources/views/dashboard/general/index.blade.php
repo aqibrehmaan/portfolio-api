@@ -32,17 +32,21 @@
                 </div>
 
                 <div class="col-lg-8 col-xl-5">
-                    <div class="current-image mb-3">
-                        <img src="{{ asset('storage/' . $general->logo_image) }}" alt="Logo Image" width="100" height="100">
-                    </div>
+
+
+                    @if ($general->logo_image != 'NULL')
+                        <div class="current-image mb-3">
+                            <img src="{{ asset('storage/' . $general->logo_image) }}" alt="Logo Image" width="100" height="100">
+                        </div>
+                    @endif
 
                     <div class="form-group">
-                        <label for="before">Upload Logo <span class="text-danger">*</span></label>
+                        <label for="">Upload Logo <span class="text-danger">*</span></label>
                         <input type="file" name="logo_image" class="form-control">
                     </div>
                 </div>
 
-                <div class="col-lg-8 col-xl-5">
+                {{-- <div class="col-lg-8 col-xl-5">
                     <div class="current-image mb-3">
                         <img src="{{ asset('storage/' . $general->logo_image) }}" alt="Logo Image" width="100" height="100">
                     </div>
@@ -51,14 +55,7 @@
                         <label for="before">Upload Favicon <span class="text-danger">*</span></label>
                         <input type="file" name="favicon_image" class="form-control">
                     </div>
-                </div>
-
-                <div class="col-3">
-                    <div class="form-group">
-                        <label for="website_color" class="d-block">Website Color <span class="text-danger">*</span></label>
-                        <input type="color" class="" rows="3" id="website_color" name="website_color" placeholder="" value="" required>
-                    </div>
-                </div>
+                </div> --}}
 
                 <div class="col-12">
                     <button type="submit" class="btn btn-primary">Update</button>

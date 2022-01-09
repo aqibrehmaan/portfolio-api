@@ -13,10 +13,13 @@ class PostFactory extends Factory
      */
     public function definition()
     {
+        $videos = ['648802095', '648847915'];
+        $titles = ['“A Good Plot” - Trailer', '“Cult Followers” - Trailer'];
+
         return [
-            'title' => $this->faker->sentence(6, true),
-            'video' => '<iframe src="https://player.vimeo.com/video/10985679?h=7008dd1c79" width="640" height="480" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                <p><a href="https://vimeo.com/10985679">Cat</a> from <a href="https://vimeo.com/firebirdflame">Ian S</a> on <a href="https://vimeo.com">Vimeo</a>.</p>',
+            'title' => $titles[$this->faker->numberBetween(0, 1)],
+            'video' => $videos[$this->faker->numberBetween(0, 1)],
+            'description' => $this->faker->paragraph(10,true),
             'category_id' => $this->faker->numberBetween(1, 3)
         ];
     }

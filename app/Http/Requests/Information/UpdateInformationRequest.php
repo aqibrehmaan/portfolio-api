@@ -24,10 +24,9 @@ class UpdateInformationRequest extends FormRequest
     public function rules()
     {
         return [
-
             'info_head' => 'required',
             'info_description' => 'required',
-
+            'info_image' => 'required|image|mimes:jpeg,png,jpg'
         ];
     }
 }

@@ -15,7 +15,7 @@ class GeneralFactory extends Factory
     {
         return [
             'website_title' => 'My Portfolio Website',
-            'logo_image' => 'NULL'
+            'logo_image' => 'logo/1639653392.png'
         ];
     }
 }

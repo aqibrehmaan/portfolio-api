@@ -26,6 +26,7 @@ class CreatePostRequest extends FormRequest
         return [
             'title' => 'required|min:10|max:100|unique:posts',
             'video' => 'required',
+            'description' => 'required',
             'category_id' => 'required|numeric'
         ];
     }

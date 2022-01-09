@@ -17,6 +17,7 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('video');
+            $table->text('description');
             $table->foreignId('category_id')->constrained()->onUpdate('cascade')
             ->onDelete('cascade');
             $table->timestamps();

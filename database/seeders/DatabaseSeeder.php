@@ -40,30 +40,30 @@ class DatabaseSeeder extends Seeder
         Post::factory(10)->create();
 
         // Navigation
-        Navigation::factory()->create([
-            'link' => '/',
-            'name' => 'Home'
-        ]);
+        // Navigation::factory()->create([
+        //     'link' => '/',
+        //     'name' => 'Home'
+        // ]);
 
         Navigation::factory()->create([
             'link' => 'work',
             'name' => 'Work'
         ]);
 
-        Navigation::factory()->create([
-            'link' => 'blog',
-            'name' => 'Blog'
-        ]);
+        // Navigation::factory()->create([
+        //     'link' => 'blog',
+        //     'name' => 'Blog'
+        // ]);
 
         Navigation::factory()->create([
             'link' => 'info',
             'name' => 'Info'
         ]);
 
-        Navigation::factory()->create([
-            'link' => 'contact',
-            'name' => 'Contact'
-        ]);
+        // Navigation::factory()->create([
+        //     'link' => 'contact',
+        //     'name' => 'Contact'
+        // ]);
 
         // General
         General::factory()->create();
@@ -73,5 +73,6 @@ class DatabaseSeeder extends Seeder
 
         // Information
         Information::factory()->create();
+
     }
 }

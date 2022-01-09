@@ -32,8 +32,18 @@
 
                 <div class="col-12">
                     <div class="form-group">
-                        <label for="video">Video <span class="text-danger">*</span></label>
-                        <textarea type="text" class="form-control" rows="5" id="video" name="video" placeholder="Post Video" required>{{ $post->video }}</textarea>
+                        <label for="video">Vimeo Video Key<span class="text-danger">*</span></label>
+                        {{-- <textarea type="text" class="form-control" rows="5" id="video" name="video" placeholder="Post Video" required>{{ $post->video }}</textarea> --}}
+
+                        <input type="text" name="video" id="video" class="form-control" value="{{ $post->video }}">
+
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="description">Description<span class="text-danger">*</span></label>
+                        <textarea type="text" class="form-control" rows="5" id="description" name="description" placeholder="Post Description" required>{{ $post->description }}</textarea>
                     </div>
                 </div>
 

@@ -27,6 +27,7 @@
                                 <th>No</th>
                                 <th>Title</th>
                                 <th>Video</th>
+                                <th>Description</th>
                                 <th>Category</th>
                                 <th class="text-center" style="width: 100px;">Actions</th>
                             </tr>
@@ -39,7 +40,16 @@
                                 <td class="font-w600 font-size-sm">
                                     <a href="#">{{ $post->title }}</a>
                                 </td>
-                                <th>{{ $post->video }}</th>
+
+                                {{-- <iframe src="https://player.vimeo.com/video/648802095?h=5ff2c1faa3" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> --}}
+
+                                <td>
+                                    <iframe src="https://player.vimeo.com/video/{{ $post->video }}?h=5ff2c1faa3" width="100%" height="160" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                                </td>
+                                <td>
+                                    {{ Str::limit($post->description, 50, $end='...')   }}
+                                    
+                                </td>
                                 <th>{{ $post->category->name }}</th>
                                 <td class="text-center">
                                     <div class="btn-group">

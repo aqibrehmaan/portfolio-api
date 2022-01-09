@@ -18,11 +18,26 @@
 
         @include('dashboard.partials.success-error')
 
-        <form action="{{ route("information.update", $information->id) }}" method="POST">
+        <form action="{{ route("information.update", $information->id) }}" method="POST" enctype="multipart/form-data">
             @method('PUT')
             @csrf
 
             <div class="row items-push">
+
+                <div class="col-lg-8 col-xl-5">
+
+                    @if ($information->info_image != 'NULL')
+                        <div class="current-image mb-3">
+                            <img src="{{ asset('storage/' . $information->info_image) }}" alt="Info Image" width="100" height="100">
+                        </div>
+                    @endif
+
+                    <div class="form-group">
+                        <label for="before">Upload Info Image <span class="text-danger">*</span></label>
+                        <input type="file" name="info_image" class="form-control">
+                    </div>
+                </div>
+
                 <div class="col-12">
                     <div class="form-group">
                         <label for="info">About Us<span class="text-danger">*</span></label>

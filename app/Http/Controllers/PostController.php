@@ -41,6 +41,7 @@ class PostController extends Controller
         $post = Post::create([
             'title' => $request->title,
             'video' => $request->video,
+            'description' => $request->description,
             'category_id' => $request->category_id
         ]);
 
@@ -91,6 +92,7 @@ class PostController extends Controller
         $post = $post->update([
             'title' => $request->title,
             'video' => $request->video,
+            'description' => $request->description,
             'category_id' => $request->category_id
         ]);
 
